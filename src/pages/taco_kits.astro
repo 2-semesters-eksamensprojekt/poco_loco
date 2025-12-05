@@ -1,0 +1,28 @@
+---
+const url = "https://mmrncfqaulcikmsvcajc.supabase.co/rest/v1/Packages";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1tcm5jZnFhdWxjaWttc3ZjYWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5MDk4NDksImV4cCI6MjA4MDQ4NTg0OX0.lCiHp8286uEb--d6v6H8AW5GG-NjQHHyJ3JfktN1F5s";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const packagesRequest = await fetch(url, options);
+const packageData = await packagesRequest.json();
+
+console.log("Data: ", packageData[0].Name);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro_underside</title>
+  </head>
+  <body>
+    <h1>Astro_underside</h1>
+  </body>
+</html>
