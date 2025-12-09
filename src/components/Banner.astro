@@ -1,0 +1,64 @@
+<!-- Kilde: Youtubevideo  -->
+<section>
+  <div class="banner">
+    <ul class="banner_content">
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+    </ul>
+    <ul class="banner_content">
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+    </ul>
+    <ul class="banner_content">
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+      <li>POCO LOGO</li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .banner {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .banner_content {
+    display: flex;
+    flex-shrink: 0;
+    animation: scroll 20s linear infinite;
+  }
+
+  .banner_content li {
+    font-size: 5rem;
+    color: var(--rød);
+    margin-right: 50px;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+</style>
