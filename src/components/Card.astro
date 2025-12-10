@@ -1,0 +1,36 @@
+---
+const { image, text, title, price_single, price_multi } = Astro.props;
+---
+
+<article>
+  <img src={image} alt="" />
+  <h2>{title}</h2>
+  <p class="text">{text}</p>
+  <div class="price">
+    <p>{price_single}</p>
+    <p>{price_multi}</p>
+  </div>
+</article>
+
+<style>
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.8;
+  }
+
+  img {
+    width: 450px;
+  }
+</style>

@@ -27,3 +27,12 @@ img {
 }
 
 /********** Generel styling **************/
+
+p,
+h1,
+h2,
+h3,
+a,
+li {
+  font-family: "Open Sans", sans-serif;
+}
