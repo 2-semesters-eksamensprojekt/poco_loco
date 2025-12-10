@@ -4,19 +4,43 @@
       <img src="/logo.svg" alt="Logo" />
     </a>
   </div>
+
+  <div class="right_bar">
+    <a href="">Book table</a>
+    <a href="">Takeaway</a>
+  </div>
+
   <nav>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">About Us</a></li>
-      <li><a href="index.html">Contact Us</a></li>
-    </ul>
     <div class="burger">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
     </div>
+
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">About Us</a></li>
+      <li><a href="index.html">Contact Us</a></li>
+    </ul>
   </nav>
 </header>
+
+<script is:inline>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+
+  burger.addEventListener("click", burgerClick);
+  function burgerClick() {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  }
+  menu.addEventListener("click", menuClick);
+  function menuClick() {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  }
+</script>a
 
 <style>
   header {
@@ -35,6 +59,7 @@
   nav {
     display: flex;
     align-items: center;
+    order: -1;
   }
 
   .menu {
@@ -55,14 +80,16 @@
   .menu a {
     display: block;
     padding: 10px;
-    color: #333333;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
     text-align: end;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .menu a:hover {
-    color: #ff0000;
+    text-decoration: underline;
   }
 
   .burger {
@@ -82,13 +109,35 @@
   .burger {
     display: none;
   }
-  @media screen and (max-width: 800px) {
+
+  .right_bar a {
+    background-color: blue;
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+  @media screen and (max-width: 1000px) {
+    header {
+      justify-content: space-between;
+    }
+    nav {
+      order: 0;
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+
     .menu {
       display: none;
     }
     .burger {
       display: block;
     }
+
+    .right_bar {
+      display: none;
+    }
+
     .burger.active .line:nth-child(1) {
       transform: rotate(45deg) translate(10px, 10px);
       transition: 0.2s linear;
@@ -106,7 +155,7 @@
 
     nav.active .menu {
       display: block;
-      background-color: #ffffff;
+      background-color: red;
       position: absolute;
       top: 200px;
       left: 0;
