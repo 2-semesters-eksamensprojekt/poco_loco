@@ -1,0 +1,49 @@
+
+<section class="grid">
+    <div class="text_content">
+      <h2>Poco Loco</h2>
+      <p>Mauris egestas turpis. Vitae pulvinar lobortis vel ut at. Sed facilisis vestibulum, sed bibendum. Vitae, tristique suspendisse condimentum pulvinar rutrum dui sed tincidunt ut. Mauris porttitor diam facilisis sit amet. r diam facilisis sit amet.</p>
+    </div>
+    <img src="/taco.png" alt="" />
+  </section>
+
+  <style>
+    .grid {
+    background-color:red;
+   } 
+  .text_content {
+    padding: 2rem 1.4rem;
+  }
+
+  h2 {
+    font-size: clamp(3rem, 5vw, 6rem);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    line-height: 1.8;
+    padding-bottom: 1.5rem;
+  }
+
+  /**************** Desktop **************/
+  @media (min-width: 1000px) {
+  .grid {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "image"
+        "text";
+    align-items: stretch;
+  }
+
+  .text_content {
+    margin: 0 auto;
+  }
+
+  img {
+    grid-area:image;
+    object-fit: cover;
+  }
+}
+    </style>
