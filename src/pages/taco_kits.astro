@@ -1,5 +1,6 @@
 ---
 import PackageCard from "../components/PackageCard.astro";
+import PackageCardSection from "../components/PackageCardSection.astro";
 
 const url = "https://mmrncfqaulcikmsvcajc.supabase.co/rest/v1/Packages";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1tcm5jZnFhdWxjaWttc3ZjYWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5MDk4NDksImV4cCI6MjA4MDQ4NTg0OX0.lCiHp8286uEb--d6v6H8AW5GG-NjQHHyJ3JfktN1F5s";
@@ -31,6 +32,6 @@ console.log("Data: ", packageData[0].Name);
   <body>
     <h1>Astro_underside</h1>
     <a href=`/packages/${packageData[2].slug}`>underside</a>
-    <PackageCard title={packageData[0].Name} text="Our For The Couple pack is designed for two people who want to enjoy a cozy and flavorful taco night at home. With a selection of delicious tacos, fresh toppings, and vibrant salsas, everything is prepared and ready for you to heat, assemble, and enjoy together." price=`Price: ${packageData[0].Price},-` />
+    <PackageCardSection data={packageData} />
   </body>
 </html>
