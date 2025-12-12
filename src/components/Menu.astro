@@ -1,7 +1,11 @@
-<header>
+---
+const { logo, variant } = Astro.props;
+---
+
+<header class={variant}>
   <div class="logo">
     <a href="/">
-      <img src="/logo.svg" alt="Logo" />
+      <img src={logo} alt="Logo" />
     </a>
   </div>
 
@@ -115,6 +119,22 @@
     font-size: 2rem;
     margin-right: 2rem;
   }
+  /*********** Variant *************/
+
+  .menu_variant {
+    background-color: aquamarine;
+  }
+
+  .menu_variant .menu a {
+    color: black;
+  }
+
+  .menu_variant .burger .line {
+    background-color: black;
+  }
+
+  /***********  Mobile ***************/
+
   @media screen and (max-width: 1000px) {
     header {
       justify-content: space-between;

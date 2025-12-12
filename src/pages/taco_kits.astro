@@ -1,6 +1,7 @@
 ---
 import PackageCardSection from "../components/PackageCardSection.astro";
 import Section_PackagePage from "../components/Section_PackagePage.astro";
+import Menu from "../components/Menu.astro";
 
 const url = "https://mmrncfqaulcikmsvcajc.supabase.co/rest/v1/Packages";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1tcm5jZnFhdWxjaWttc3ZjYWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5MDk4NDksImV4cCI6MjA4MDQ4NTg0OX0.lCiHp8286uEb--d6v6H8AW5GG-NjQHHyJ3JfktN1F5s";
@@ -32,6 +33,7 @@ console.log("Data: ", packageData[0].Name);
   <body>
     <h1>Astro_underside</h1>
     <a href=`/packages/${packageData[2].slug}`>underside</a>
+    <Menu variant="menu_variant" logo="/logo1.svg" />
     <Section_PackagePage />
     <PackageCardSection data={packageData} />
   </body>
