@@ -1,7 +1,5 @@
 ---
-import Form_information from "../../components/Form_information.astro";
-import Form_Package from "../../components/Form_Package.astro";
-import Form_content from "../../components/Form_content.astro";
+import SectionForm from "../../components/SectionForm.astro";
 
 import type { GetStaticPaths } from "astro";
 export async function getStaticPaths() {
@@ -44,8 +42,6 @@ console.log("packages: ");
   <body>
     <h1>slug</h1>
     <p>{packages.Name}</p>
-    <Form_content />
-    <Form_Package />
-    <Form_information />
+    <SectionForm />
   </body>
 </html>
