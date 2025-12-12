@@ -1,0 +1,69 @@
+<section>
+  <h2>What’s Included</h2>
+  <div class="content">
+    <div class="grid_1-1">
+      <div>
+        <h3>6 Tacos</h3>
+        <p>2x Chicken, 2x Pork, 2x Birria</p>
+      </div>
+      <div>
+        <h3>6 Salsas</h3>
+        <p>Salsa verde, Chipotle, Guajillo</p>
+      </div>
+      <div>
+        <h3>Mixed Toppings</h3>
+        <p>Coriands, Onions, Limes</p>
+      </div>
+      <div>
+        <h3>Cooking Guide</h3>
+        <p>Step-by-step instructions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: aquamarine;
+    border-radius: 40px;
+    margin: 0 2rem;
+    padding: 2rem 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 1000px) {
+    .content {
+      display: flex;
+      justify-content: center;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 225px;
+      row-gap: 0;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h3,
+    p {
+      text-align: start;
+      margin-right: 2rem;
+    }
+  }
+</style>

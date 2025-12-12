@@ -1,6 +1,8 @@
 ---
 import Form_information from "../../components/Form_information.astro";
 import Form_Package from "../../components/Form_Package.astro";
+import Form_content from "../../components/Form_content.astro";
+
 import type { GetStaticPaths } from "astro";
 export async function getStaticPaths() {
   const url = "https://mmrncfqaulcikmsvcajc.supabase.co/rest/v1/Packages";
@@ -42,6 +44,7 @@ console.log("packages: ");
   <body>
     <h1>slug</h1>
     <p>{packages.Name}</p>
+    <Form_content />
     <Form_Package />
     <Form_information />
   </body>
