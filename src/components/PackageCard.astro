@@ -1,0 +1,35 @@
+---
+const { title, text, price } = Astro.props;
+---
+
+<article>
+  <h2>{title}</h2>
+  <p>{text}</p>
+  <p class="price">{price}</p>
+</article>
+
+<style>
+  article {
+    background-color: aqua;
+    margin: 0 auto;
+    padding: 2.5rem 3rem;
+    margin-bottom: 2rem;
+    min-width: 470px;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 2;
+  }
+
+  .price {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+</style>
