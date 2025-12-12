@@ -40,8 +40,11 @@ console.log("packages: ");
     <title></title>
   </head>
   <body>
-    <h1>slug</h1>
-    <p>{packages.Name}</p>
-    <SectionForm />
+    <div class="form_section">
+      <h1>{packages.Name}</h1>
+      <p>{packages.Short_description}</p>
+    </div>
+    <img src="" alt="" />
+    <SectionForm price={packages.Price} />
   </body>
 </html>

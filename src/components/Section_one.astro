@@ -1,4 +1,3 @@
-
 <section class="grid">
   <div class="text_content">
     <h2>Poco Loco</h2>
@@ -9,9 +8,10 @@
 </section>
 
 <style>
-   .grid {
-    background-color:red;
-   } 
+  .grid {
+    background-color: red;
+    margin-bottom: 6rem;
+  }
   .text_content {
     padding: 2rem 1.4rem;
   }
@@ -29,22 +29,22 @@
 
   /**************** Desktop **************/
   @media (min-width: 1000px) {
-  .grid {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
         "image"
         "text";
-  }
+    }
 
-  .text_content {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+    .text_content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-  img {
-    max-width: 800px;
-    grid-area:image;
+    img {
+      max-width: 800px;
+      grid-area: image;
+    }
   }
-}
 </style>

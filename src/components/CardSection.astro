@@ -17,15 +17,16 @@ import Card from "./Card.astro";
   }
 
   .carrousel {
-    padding-left: 1.5rem;
+    padding: 0 2rem;
     display: grid;
     grid-auto-flow: column;
     scroll-behavior: auto;
-    gap: 1.5rem;
+    gap: 2rem;
     overflow-y: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    margin-bottom: 12rem;
   }
 
   .carrousel::-webkit-scrollbar {
@@ -33,5 +34,12 @@ import Card from "./Card.astro";
   }
   .card {
     scroll-snap-align: start;
+  }
+
+  @media (min-width: 1200px) {
+    .carrousel {
+      gap: 4rem;
+      padding: 0 5rem;
+    }
   }
 </style>

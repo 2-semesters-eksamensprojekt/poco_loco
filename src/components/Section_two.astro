@@ -1,16 +1,16 @@
-
 <section class="grid">
-    <div class="text_content">
-      <h2>Poco Loco</h2>
-      <p>Mauris egestas turpis. Vitae pulvinar lobortis vel ut at. Sed facilisis vestibulum, sed bibendum. Vitae, tristique suspendisse condimentum pulvinar rutrum dui sed tincidunt ut. Mauris porttitor diam facilisis sit amet. r diam facilisis sit amet.</p>
-    </div>
-    <img src="/taco.png" alt="" />
-  </section>
+  <div class="text_content">
+    <h2>Poco Loco</h2>
+    <p>Mauris egestas turpis. Vitae pulvinar lobortis vel ut at. Sed facilisis vestibulum, sed bibendum. Vitae, tristique suspendisse condimentum pulvinar rutrum dui sed tincidunt ut. Mauris porttitor diam facilisis sit amet. r diam facilisis sit amet.</p>
+  </div>
+  <img src="/taco.png" alt="" />
+</section>
 
-  <style>
-    .grid {
-    background-color:red;
-   } 
+<style>
+  .grid {
+    background-color: red;
+    margin-bottom: 10rem;
+  }
   .text_content {
     padding: 2rem 1.4rem;
   }
@@ -28,22 +28,22 @@
 
   /**************** Desktop **************/
   @media (min-width: 1000px) {
-  .grid {
-    display:grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas:
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
         "image"
         "text";
-    align-items: stretch;
-  }
+      align-items: stretch;
+    }
 
-  .text_content {
-    margin: 0 auto;
-  }
+    .text_content {
+      margin: 0 auto;
+    }
 
-  img {
-    grid-area:image;
-    object-fit: cover;
+    img {
+      grid-area: image;
+      object-fit: cover;
+    }
   }
-}
-    </style>
+</style>
