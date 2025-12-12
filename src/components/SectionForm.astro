@@ -1,0 +1,38 @@
+---
+import FormContent from "./FormContent.astro";
+import FormPackage from "./FormPackage.astro";
+import FormInformation from "./FormInformation.astro";
+---
+
+<section>
+  <div class="content">
+    <FormContent />
+  </div>
+  <div class="grid_1-1">
+    <div class="information">
+      <FormInformation />
+    </div>
+    <div class="package">
+      <FormPackage />
+    </div>
+  </div>
+</section>
+
+<style>
+  .content,
+  .information,
+  .paackage {
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 1050px) {
+    section {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
