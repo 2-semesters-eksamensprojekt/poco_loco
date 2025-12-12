@@ -1,4 +1,5 @@
 ---
+import Form_information from "../../components/Form_information.astro";
 import type { GetStaticPaths } from "astro";
 export async function getStaticPaths() {
   const url = "https://mmrncfqaulcikmsvcajc.supabase.co/rest/v1/Packages";
@@ -31,10 +32,15 @@ console.log("packages: ");
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
     <title></title>
   </head>
   <body>
     <h1>slug</h1>
     <p>{packages.Name}</p>
+    <Form_information />
   </body>
 </html>
