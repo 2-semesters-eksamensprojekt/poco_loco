@@ -19,16 +19,22 @@
     margin-left: 3rem;
   }
 
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
   h2 {
-    font-size: clamp(2.5rem, 4vw, 4.375rem);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     margin-bottom: 1.5rem;
     color: #fff1e0;
   }
 
   li {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: 1rem;
     color: #fffaf4;
+    font-weight: 200;
   }
 
   .text_box {
@@ -37,19 +43,24 @@
 
   @media (min-width: 1000px) {
     section {
-      max-height: 500px;
+      max-height: 590px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       place-items: center start;
     }
 
     img {
-      max-height: 500px;
+      max-height: 590px;
       object-fit: cover;
     }
 
     .text_box. {
       padding-right: 0;
+    }
+
+    li {
+      margin-left: 2rem;
+      margin-bottom: 2rem;
     }
   }
 </style>

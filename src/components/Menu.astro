@@ -49,7 +49,7 @@ const { logo, variant } = Astro.props;
     burger.classList.remove("active");
     nav.classList.remove("active");
   }
-</script>a
+</script>
 
 <style>
   header {
@@ -57,7 +57,7 @@ const { logo, variant } = Astro.props;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
   }
 
   .logo img {
@@ -76,10 +76,11 @@ const { logo, variant } = Astro.props;
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-left: 2rem;
   }
 
   .menu li {
-    margin-right: 20px;
+    margin-right: 50px;
   }
 
   .menu li:last-child {
@@ -89,7 +90,7 @@ const { logo, variant } = Astro.props;
   .menu a {
     display: block;
     padding: 10px;
-    color: white;
+    color: #faf2e8;
     text-decoration: none;
     transition: color 0.3s;
     text-align: end;
@@ -121,7 +122,7 @@ const { logo, variant } = Astro.props;
 
   .right_bar a {
     background-color: #ea590e;
-    color: #ffffff;
+    color: #faf2e8;
     font-size: 1.5rem;
     font-weight: 700;
     margin-right: 2rem;
@@ -141,9 +142,16 @@ const { logo, variant } = Astro.props;
   /*********** Variant *************/
 
   .menu_variant {
+    position: sticky;
     background-color: #eed3b1;
     padding: 0;
     padding-top: 5px;
+  }
+
+  .menu_variant .logo img {
+    width: 100px;
+    height: 100px;
+    margin-left: 1rem;
   }
 
   .menu_variant .menu a {
@@ -161,7 +169,7 @@ const { logo, variant } = Astro.props;
 
   /***********  Mobile ***************/
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     header {
       justify-content: space-between;
     }
@@ -227,6 +235,7 @@ const { logo, variant } = Astro.props;
 
     nav.active .menu li:last-child {
       border-bottom: none;
+      margin-bottom: 1.2rem;
     }
 
     nav.active .menu a {

@@ -40,11 +40,14 @@ console.log("packages: ");
     <title></title>
   </head>
   <body>
+    <div class="arrow">
+      <a href="/taco_kits.html"><img src="/Arrow.svg" alt="Tilbage pil" /></a>
+    </div>
     <div class="form_section">
       <h1>{packages.Name}</h1>
       <p>{packages.Short_description}</p>
+      <img src={packages.Images} alt="Billeder af pakke" />
     </div>
-    <img src="" alt="" />
-    <SectionForm price={packages.Price} />
+    <SectionForm data={packages} />
   </body>
 </html>

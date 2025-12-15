@@ -46,9 +46,9 @@
   }
 
   .banner_content li {
-    font-size: 5rem;
+    font-size: clamp(5rem, 8vw, 8rem);
     color: #53002c;
-    margin-right: 50px;
+    margin-right: 100px;
     list-style: none;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -60,6 +60,13 @@
     }
     to {
       transform: translateX(0%);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    section {
+      margin-top: 8rem;
+      margin-bottom: 8rem;
     }
   }
 </style>

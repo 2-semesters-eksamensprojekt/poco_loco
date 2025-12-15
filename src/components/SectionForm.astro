@@ -2,12 +2,12 @@
 import FormContent from "./FormContent.astro";
 import FormPackage from "./FormPackage.astro";
 import FormInformation from "./FormInformation.astro";
-const { price } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <section>
   <div class="content">
-    <FormContent />
+    <FormContent tacos={data.Tacos} chicken={data.Chicken} pork={data.Pork} birria={data.Birria} salsa={data.Salsas} />
   </div>
   <div class="grid_1-1">
     <div class="information">
@@ -21,7 +21,7 @@ const { price } = Astro.props;
       <input type="text" class="textbox" />
       <p class="priceline">
         <span class="total">Total</span>
-        <span class="price">{price} ,-</span>
+        <span class="price">{data.Price} ,-</span>
         <span class="taxes"> Taxes included</span>
       </p>
       <hr />
@@ -31,6 +31,10 @@ const { price } = Astro.props;
       <input type="checkbox" id="terms" name="terms" value="terms" />
       <label for="terms"> I agree to the restaurants terms and conditions *</label><br />
     </form>
+
+    <div class="button">
+      <a href="">SUBMIT ORDER</a>
+    </div>
   </div>
 </section>
 
@@ -54,6 +58,7 @@ const { price } = Astro.props;
     padding-left: 1rem;
     border: none;
     background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     max-width: 500px;
     height: 200px;
   }
@@ -65,7 +70,9 @@ const { price } = Astro.props;
   .text_box p {
     margin-bottom: 1rem;
     margin-left: 1rem;
+    font-size: 1.2rem;
     color: #4d1432;
+    max-width: 500px;
   }
 
   .terms label {
@@ -95,6 +102,29 @@ const { price } = Astro.props;
     max-width: 400px;
   }
 
+  .button a {
+    display: block;
+    background-color: #ea590e;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    width: fit-content;
+  }
+
+  .button {
+    margin-top: 4rem;
+    margin-left: 2.8rem;
+    margin-bottom: 8rem;
+  }
+
+  .button a:hover {
+    background-color: #9a3512;
+  }
+
   @media (min-width: 1050px) {
     section {
       max-width: 1300px;
@@ -106,6 +136,10 @@ const { price } = Astro.props;
     }
     .terms {
       grid-row: 3/4;
+    }
+
+    .button {
+      grid-row: 4/5;
     }
   }
 </style>

@@ -8,9 +8,9 @@ const { package1, package2, package3 } = Astro.props;
     <form class="package">
       <label for="pack">Pack Type</label>
       <select id="pack" name="pack">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
+        <option value="australia">For The Couple</option>
+        <option value="canada">For The Family</option>
+        <option value="usa">For The Party</option>
       </select>
 
       <label for="Quantity">Quantity *</label>
@@ -30,6 +30,7 @@ const { package1, package2, package3 } = Astro.props;
 <style>
   section {
     background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 40px;
     margin: 0 2rem;
   }
@@ -59,6 +60,7 @@ const { package1, package2, package3 } = Astro.props;
     padding: 15px;
     border-radius: 20px;
     box-sizing: border-box;
+
     font-size: 1.1rem;
     padding-left: 1rem;
     border-color: #4d1432;
