@@ -142,6 +142,8 @@ const { logo, variant } = Astro.props;
 
   .menu_variant {
     background-color: #eed3b1;
+    padding: 0;
+    padding-top: 5px;
   }
 
   .menu_variant .menu a {
@@ -187,7 +189,8 @@ const { logo, variant } = Astro.props;
       display: block;
     }
 
-    .burger.active .line {
+    .burger.active .line,
+    .menu_variant .burger.active .line {
       background-color: #e8d1b4;
     }
 
