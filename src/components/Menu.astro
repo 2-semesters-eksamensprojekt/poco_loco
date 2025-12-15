@@ -10,8 +10,8 @@ const { logo, variant } = Astro.props;
   </div>
 
   <div class="right_bar">
-    <a href="">Book table</a>
-    <a href="">Takeaway</a>
+    <a href="">TAKEAWAY</a>
+    <a href="https://restaurant-poco-loco.superbexperience.com/">BOOK TABLE</a>
   </div>
 
   <nav>
@@ -22,9 +22,9 @@ const { logo, variant } = Astro.props;
     </div>
 
     <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">About Us</a></li>
-      <li><a href="index.html">Contact Us</a></li>
+      <li><a href="https://mexicanfood.dk/wp-content/uploads/2025/08/Menu_Poco_Loco_August_2025.pdf">MENU</a></li>
+      <li><a href="taco_kits.html">TACO TOGO</a></li>
+      <li><a href="index.html">ABOUT US</a></li>
     </ul>
   </nav>
 </header>
@@ -115,27 +115,42 @@ const { logo, variant } = Astro.props;
   }
 
   .right_bar a {
-    background-color: blue;
-    font-size: 2rem;
+    background-color: #ea590e;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-right: 2rem;
+    text-decoration: none;
+    padding: 0.8rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .right_bar a:hover {
+    background-color: #9a3512;
   }
   /*********** Variant *************/
 
   .menu_variant {
-    background-color: aquamarine;
+    background-color: #eed3b1;
   }
 
   .menu_variant .menu a {
-    color: black;
+    color: #ac591b;
   }
 
   .menu_variant .burger .line {
-    background-color: black;
+    background-color: #ac591b;
+  }
+
+  .menu_variant .right_bar a {
+    background-color: #d17735;
+    color: #faf2e8;
   }
 
   /***********  Mobile ***************/
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     header {
       justify-content: space-between;
     }

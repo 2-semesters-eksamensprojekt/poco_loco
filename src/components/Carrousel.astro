@@ -13,34 +13,17 @@
 
   <div class="image_section">
     <div class="carrousel">
-      <img src="/bowls.png" alt="" />
-      <img src="/bowls.png" alt="" />
-      <img src="/bowls.png" alt="" />
-      <img src="/bowls.png" alt="" />
-      <img src="/bowls.png" alt="" />
-      <img src="/bowls.png" alt="" />
-      <img src="/bowls.png" alt="" />
-      <img src="/bowls.png" alt="" />
+      <img src="/instagrampost1.webp" alt="" />
+      <img src="/instagrampost2.webp" alt="" />
+      <img src="/instagrampost3.webp" alt="" />
+      <img src="/instagrampost4.webp" alt="" />
+      <img src="/instagrampost8.webp" alt="" />
+      <img src="/instagrampost6.webp" alt="" />
+      <img src="/instagrampost7.webp" alt="" />
+      <img src="/instagrampost5.webp" alt="" />
     </div>
   </div>
 </section>
-
-<script is:inline>
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector("nav");
-  const menu = document.querySelector(".menu");
-
-  burger.addEventListener("click", burgerClick);
-  function burgerClick() {
-    burger.classList.toggle("active");
-    nav.classList.toggle("active");
-  }
-  menu.addEventListener("click", menuClick);
-  function menuClick() {
-    burger.classList.remove("active");
-    nav.classList.remove("active");
-  }
-</script>
 
 <style>
   .image_section {
@@ -67,18 +50,21 @@
   img {
     scroll-snap-align: center;
     width: 400px;
+    height: 600px;
+    object-fit: cover;
   }
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    color: #4b1a09;
   }
 
   p {
-    font-weight: 1rem;
     font-weight: lighter;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
+    margin-left: 0.2rem;
   }
 
   a {

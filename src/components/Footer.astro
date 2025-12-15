@@ -22,16 +22,17 @@
 
     <div class="menu">
       <ul>
-        <li><a href="">VIEW MENU</a></li>
-        <li><a href="">BOOK TABLE</a></li>
-        <li><a href="">TAKEAWAY</a></li>
-        <li><a href="">TACO TO-GO</a></li>
+        <li><a href="https://mexicanfood.dk/wp-content/uploads/2025/08/Menu_Poco_Loco_August_2025.pdf">VIEW MENU</a></li>
+        <li><a href="https://restaurant-poco-loco.superbexperience.com/">BOOK TABLE</a></li>
+        <li><a href="/">TAKEAWAY</a></li>
+        <li><a href="/taco_kits.html">TACO TOGO</a></li>
       </ul>
 
       <hr />
-      <div>
-        <img src="" alt="" />
-        <img src="" alt="" />
+      <div class="flex">
+        <a href="https://www.instagram.com/pocoloco_cph/"><img src="/Instagram.svg" class="instagram_app" alt="Instagram app" /></a>
+        <a href="https://www.tiktok.com/@pocoloco_cph"><img src="/TikTok.svg" alt="TikTok app" /></a>
+        <a href="https://www.facebook.com/profile.php?id=61580420585841&locale=da_DK"><img src="/Facebook.svg" alt="Facebook app" /></a>
       </div>
     </div>
   </div>
@@ -41,7 +42,8 @@
 
 <style>
   footer {
-    background-color: aqua;
+    background-color: #4d1432;
+    overflow: hidden;
   }
   .content {
     padding-left: 2rem;
@@ -50,15 +52,18 @@
 
   h1 {
     font-size: 16.6vw;
+    line-height: 0.7;
     font-weight: bolder;
     text-align: center;
-    line-height: 0.7;
     margin-top: 2rem;
+    margin-bottom: 2r;
+    color: #ffdac1;
   }
 
   h3 {
     font-size: 1.5rem;
     margin-top: 2rem;
+    color: #e8d1b4;
   }
 
   .menu ul {
@@ -74,11 +79,13 @@
     font-size: 1rem;
     list-style: none;
     margin-bottom: 0.8rem;
+    color: #ffdac1;
   }
 
   a {
     text-decoration: none;
     font-size: 1.5rem;
+    color: #e8d1b4;
   }
 
   a:hover {
@@ -88,9 +95,21 @@
   hr {
     border: none;
     height: 1px;
-    background: #000;
-    width: 40%;
+    background: #ffdac1;
+    width: 50%;
     margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 80%;
+  }
+
+  .flex {
+    display: flex;
+    margin-bottom: 4rem;
+    align-items: center;
+    gap: 20px;
   }
 
   /********** Desktop ************/
@@ -115,6 +134,10 @@
 
     a {
       font-size: 2.4rem;
+    }
+
+    hr {
+      width: 35%;
     }
   }
 </style>

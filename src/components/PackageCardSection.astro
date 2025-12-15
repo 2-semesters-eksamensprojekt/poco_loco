@@ -5,9 +5,9 @@ const { data } = Astro.props;
 ---
 
 <section>
-  <PackageCard title={data[0].Name} text="Our For The Couple pack is designed for two people who want to enjoy a cozy and flavorful taco night at home. With a selection of delicious tacos, fresh toppings, and vibrant salsas, everything is prepared and ready for you to heat, assemble, and enjoy together." price=`Price: ${data[0].Price},-` />
-  <PackageCard title={data[1].Name} text="Our For The Family pack gives you everything you need to enjoy a delicious taco night at home. Perfect for sharing, it brings together flavorful tacos, fresh toppings, and vibrant salsas. All prepared and ready for you to heat, assemble, and enjoy." price=`Price: ${data[1].Price},-` />
-  <PackageCard title={data[2].Name} text="Our For The Family pack gives you everything you need to enjoy a delicious taco night at home. Perfect for sharing, it brings together flavorful tacos, fresh toppings, and vibrant salsas. All prepared and ready for you to heat, assemble, and enjoy.." price=`Price: ${data[2].Price},-` />
+  <PackageCard title={data[0].Name} text="Our For The Couple pack is designed for two people who want to enjoy a cozy and flavorful taco night at home. With a selection of delicious tacos, fresh toppings, and vibrant salsas, everything is prepared and ready for you to heat, assemble, and enjoy together." price=`Price: ${data[0].Price},-` link=`/packages/${data[0].slug}.html` />
+  <PackageCard title={data[1].Name} text="Our For The Family pack gives you everything you need to enjoy a delicious taco night at home. Perfect for sharing, it brings together flavorful tacos, fresh toppings, and vibrant salsas. All prepared and ready for you to heat, assemble, and enjoy." price=`Price: ${data[1].Price},-` link=`/packages/${data[1].slug}.html` />
+  <PackageCard title={data[2].Name} text="Our For The Family pack gives you everything you need to enjoy a delicious taco night at home. Perfect for sharing, it brings together flavorful tacos, fresh toppings, and vibrant salsas. All prepared and ready for you to heat, assemble, and enjoy.." price=`Price: ${data[2].Price},-` link=`/packages/${data[2].slug}.html` />
 </section>
 
 <style>
