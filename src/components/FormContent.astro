@@ -1,13 +1,17 @@
+---
+const { tacos, chicken, pork, birria, salsa } = Astro.props;
+---
+
 <section>
   <h2>What’s Included</h2>
   <div class="content">
     <div class="grid_1-1">
       <div>
-        <h3>6 Tacos</h3>
-        <p>2x Chicken, 2x Pork, 2x Birria</p>
+        <h3>{tacos} Tacos</h3>
+        <p>{chicken}x Chicken, {pork}x Pork, {birria}x Birria</p>
       </div>
       <div>
-        <h3>6 Salsas</h3>
+        <h3>{salsa} Salsas</h3>
         <p>Salsa verde, Chipotle, Guajillo</p>
       </div>
       <div>
@@ -25,6 +29,7 @@
 <style>
   section {
     background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 40px;
     margin: 0 2rem;
     padding: 2rem 3rem;
@@ -42,21 +47,24 @@
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     color: #4d1432;
+    white-space: nowrap;
   }
 
   @media (min-width: 1000px) {
     .content {
       display: flex;
-      justify-content: center;
+      justify-content: start;
     }
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 300px;
+      column-gap: 100px;
       row-gap: 0;
+      column-gap: 350px;
+      margin: 0 4rem;
     }
 
     h2 {
@@ -66,7 +74,6 @@
     h3,
     p {
       text-align: start;
-      margin-right: 2rem;
     }
   }
 </style>
