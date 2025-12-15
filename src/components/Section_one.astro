@@ -1,50 +1,58 @@
-
 <section class="grid">
   <div class="text_content">
     <h2>Poco Loco</h2>
-    <p>Mauris egestas turpis. Vitae pulvinar lobortis vel ut at. Sed facilisis vestibulum, sed bibendum. Vitae, tristique suspendisse condimentum pulvinar rutrum dui sed tincidunt ut. Mauris porttitor diam facilisis sit amet. r diam facilisis sit amet.</p>
-    <p>tincidunt ut. Mauris porttitor diam facilisis sit amet. r diam facilisis sit amet.</p>
+    <p>At Poco Loco we bring the warmth of Mexico to Vesterbro. Our dishes are made with fresh ingredients and are true to traditional home cooking that goes several generations back. So come by and bring your amor, amigos or the whole familia, and get a taste of Mexico - just like we love it.</p>
   </div>
   <img src="/pocoloco.png" alt="" />
 </section>
 
 <style>
-   .grid {
-    background-color:red;
-   } 
+  .grid {
+    background-color: #91687e;
+    margin-bottom: 6rem;
+  }
   .text_content {
-    padding: 2rem 1.4rem;
+    padding: 4rem 1.5rem;
   }
 
   h2 {
-    font-size: clamp(3rem, 5vw, 6rem);
+    font-size: clamp(4rem, 4vw, 6.5rem);
     margin-bottom: 2rem;
+    color: #1d0813;
   }
 
   p {
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
-    line-height: 1.8;
+    font-size: clamp(1.7rem, 2.5vw, 2rem);
+    line-height: 2;
     padding-bottom: 1.5rem;
-  }
-
-  /**************** Desktop **************/
-  @media (min-width: 1000px) {
-  .grid {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "image"
-        "text";
-  }
-
-  .text_content {
-    max-width: 1000px;
-    margin: 0 auto;
+    color: #3c1127;
   }
 
   img {
-    max-width: 800px;
-    grid-area:image;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
   }
-}
+
+  /**************** Desktop **************/
+  @media (min-width: 1450px) {
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-areas:
+        "image"
+        "text";
+    }
+
+    .text_content {
+      justify-self: center;
+    }
+
+    img {
+      width: 900px;
+      height: 800px;
+      object-fit: cover;
+      grid-area: image;
+    }
+  }
 </style>

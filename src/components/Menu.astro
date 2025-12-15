@@ -2,6 +2,7 @@
 const { logo, variant } = Astro.props;
 ---
 
+<!--Kilde: Arbejdet ud fra en som er givet i undervisningen på 1. semester -->
 <header class={variant}>
   <div class="logo">
     <a href="/">
@@ -10,8 +11,8 @@ const { logo, variant } = Astro.props;
   </div>
 
   <div class="right_bar">
-    <a href="">Book table</a>
-    <a href="">Takeaway</a>
+    <a href="">TAKEAWAY</a>
+    <a href="https://restaurant-poco-loco.superbexperience.com/">BOOK TABLE</a>
   </div>
 
   <nav>
@@ -22,9 +23,13 @@ const { logo, variant } = Astro.props;
     </div>
 
     <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">About Us</a></li>
-      <li><a href="index.html">Contact Us</a></li>
+      <li><a href="https://mexicanfood.dk/wp-content/uploads/2025/08/Menu_Poco_Loco_August_2025.pdf">MENU</a></li>
+      <li><a href="taco_kits.html">TACO TOGO</a></li>
+      <li><a href="index.html">ABOUT US</a></li>
+      <div class="mobile_menu">
+        <li><a href="https://restaurant-poco-loco.superbexperience.com/">BOOK TABLE</a></li>
+        <li><a href="">TAKEAWAY</a></li>
+      </div>
     </ul>
   </nav>
 </header>
@@ -115,27 +120,46 @@ const { logo, variant } = Astro.props;
   }
 
   .right_bar a {
-    background-color: blue;
-    font-size: 2rem;
+    background-color: #ea590e;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-right: 2rem;
+    text-decoration: none;
+    padding: 0.8rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .right_bar a:hover {
+    background-color: #9a3512;
+  }
+
+  .mobile_menu {
+    display: none;
   }
   /*********** Variant *************/
 
   .menu_variant {
-    background-color: aquamarine;
+    background-color: #eed3b1;
   }
 
   .menu_variant .menu a {
-    color: black;
+    color: #ac591b;
   }
 
   .menu_variant .burger .line {
-    background-color: black;
+    background-color: #ac591b;
+  }
+
+  .menu_variant .right_bar a {
+    background-color: #d17735;
+    color: #faf2e8;
   }
 
   /***********  Mobile ***************/
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     header {
       justify-content: space-between;
     }
@@ -152,10 +176,19 @@ const { logo, variant } = Astro.props;
     }
     .burger {
       display: block;
+      z-index: 200;
     }
 
     .right_bar {
       display: none;
+    }
+
+    .mobile_menu {
+      display: block;
+    }
+
+    .burger.active .line {
+      background-color: #e8d1b4;
     }
 
     .burger.active .line:nth-child(1) {
@@ -175,21 +208,28 @@ const { logo, variant } = Astro.props;
 
     nav.active .menu {
       display: block;
-      background-color: red;
+      background-color: #4d1432;
       position: absolute;
-      top: 200px;
       left: 0;
       width: 100%;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
       z-index: 100;
+      padding-top: 35rem;
     }
 
     nav.active .menu li {
-      margin: 10px 20px;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav.active .menu li:last-child {
+      border-bottom: none;
     }
 
     nav.active .menu a {
-      font-size: 24px;
+      font-size: 35px;
+      text-align: center;
+      color: #e8d1b4;
     }
   }
 </style>

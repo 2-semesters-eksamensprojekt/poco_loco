@@ -2,6 +2,7 @@
 import FormContent from "./FormContent.astro";
 import FormPackage from "./FormPackage.astro";
 import FormInformation from "./FormInformation.astro";
+const { price } = Astro.props;
 ---
 
 <section>
@@ -15,14 +16,83 @@ import FormInformation from "./FormInformation.astro";
     <div class="package">
       <FormPackage />
     </div>
+    <div class="text_box">
+      <p>Contact us for any dietary restrictions or special requests</p>
+      <input type="text" class="textbox" />
+      <p class="priceline">
+        <span class="total">Total</span>
+        <span class="price">{price} ,-</span>
+        <span class="taxes"> Taxes included</span>
+      </p>
+      <hr />
+    </div>
+
+    <form class="terms">
+      <input type="checkbox" id="terms" name="terms" value="terms" />
+      <label for="terms"> I agree to the restaurants terms and conditions *</label><br />
+    </form>
   </div>
 </section>
 
 <style>
   .content,
   .information,
-  .paackage {
+  .package {
     margin-bottom: 4rem;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+  .text_box input {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    border-radius: 40px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    border: none;
+    background-color: white;
+    max-width: 500px;
+    height: 200px;
+  }
+
+  .text_box {
+    margin: 0 2rem;
+  }
+
+  .text_box p {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: #4d1432;
+  }
+
+  .terms label {
+    font-size: 1.2rem;
+    color: #4d1432;
+  }
+
+  .terms input {
+    scale: 1.5;
+    margin-right: 0.5rem;
+    margin-left: 3rem;
+    margin-top: 4rem;
+  }
+
+  .total {
+    margin-right: 5rem;
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #4d1432;
+  }
+
+  hr {
+    max-width: 400px;
   }
 
   @media (min-width: 1050px) {
@@ -33,6 +103,9 @@ import FormInformation from "./FormInformation.astro";
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+    .terms {
+      grid-row: 3/4;
     }
   }
 </style>
