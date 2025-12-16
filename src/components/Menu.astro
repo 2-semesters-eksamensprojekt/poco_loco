@@ -11,7 +11,7 @@ const { logo, variant } = Astro.props;
   </div>
 
   <div class="right_bar">
-    <a href="">TAKEAWAY</a>
+    <a href="https://restaurant-poco-loco.superbathome.com/menu/pocoloco">TAKEAWAY</a>
     <a href="https://restaurant-poco-loco.superbexperience.com/">BOOK TABLE</a>
   </div>
 
@@ -26,10 +26,8 @@ const { logo, variant } = Astro.props;
       <li><a href="https://mexicanfood.dk/wp-content/uploads/2025/08/Menu_Poco_Loco_August_2025.pdf">MENU</a></li>
       <li><a href="taco_kits.html">TACO TOGO</a></li>
       <li><a href="index.html">ABOUT US</a></li>
-      <div class="mobile_menu">
-        <li><a href="https://restaurant-poco-loco.superbexperience.com/">BOOK TABLE</a></li>
-        <li><a href="">TAKEAWAY</a></li>
-      </div>
+      <li class="mobile_menu"><a href="https://restaurant-poco-loco.superbexperience.com/">BOOK TABLE</a></li>
+      <li class="mobile_menu"><a href="https://restaurant-poco-loco.superbathome.com/menu/pocoloco">TAKEAWAY</a></li>
     </ul>
   </nav>
 </header>
@@ -236,7 +234,7 @@ const { logo, variant } = Astro.props;
 
     nav.active .menu li:last-child {
       border-bottom: none;
-      margin-bottom: 1.2rem;
+      margin-right: 3.5rem;
     }
 
     nav.active .menu a {
