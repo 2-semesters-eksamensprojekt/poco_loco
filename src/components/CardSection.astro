@@ -6,7 +6,7 @@ import Card from "./Card.astro";
 <section>
   <div class="carrousel">
     <Card class="card" image="/taco.webp" title="Tacos" text="Carnitas | Chicken Chipotle | Veggie | Birria | Steak" price_single="Single: DKK 45" price_multi="3 tacos:  DKK 115" />
-    <Card class="card" image="/bowl.webp" title="Bowls" text="CCarnitas | Chicken Chipotle | Birria | Veggie" price_single="Single: DKK 98" />
+    <Card class="card" image="/bowl.webp" title="Bowls" text="Carnitas | Chicken Chipotle | Birria | Veggie" price_single="Single: DKK 98" />
     <Card class="card" image="/burrito.webp" title="Burritos" text="Carnitas | Chicken Chipotle | Birria | Veggie" price_single="Single: DKK 98" />
   </div>
 </section>
@@ -17,11 +17,11 @@ import Card from "./Card.astro";
   }
 
   .carrousel {
-    padding: 0 2rem;
+    padding: 0 1rem;
     display: grid;
     grid-auto-flow: column;
     scroll-behavior: auto;
-    gap: 2rem;
+    gap: 1rem;
     overflow-y: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
