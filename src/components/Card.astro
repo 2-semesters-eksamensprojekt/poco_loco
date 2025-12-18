@@ -3,7 +3,7 @@ const { image, text, title, price_single, price_multi } = Astro.props;
 ---
 
 <article>
-  <img src={image} alt="" />
+  <img src={image} alt="Billeder af maden" />
   <h2>{title}</h2>
   <p class="text">{text}</p>
   <div class="price">
@@ -35,7 +35,7 @@ const { image, text, title, price_single, price_multi } = Astro.props;
 
   img {
     min-width: 450px;
-    height: 600px;
+    height: 550px;
     object-fit: cover;
     margin-bottom: 0.5rem;
   }
